@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ./initialize-android.sh
-android create avd --force -n test -t "Google Inc.:Google APIs:17" --abi armeabi-v7a --skin WXGA800-7in --sdcard 10M
+android create avd --force -n test -t "Google Inc.:Google APIs:17" --abi armeabi-v7a --skin WXGA800-7in --sdcard 10M --snapshot
 adb devices
 emulator -avd test -no-audio &
 ./android-wait-for-emulator.sh
